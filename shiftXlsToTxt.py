@@ -3,12 +3,16 @@ psr = argparse.ArgumentParser()
 psr.add_argument('-i', dest="input", help="input xlsx file")
 psr.add_argument('-o', dest="output", help="output txt file")
 psr.add_argument('-O', dest='goodrun', help='goodrun list file')
+psr.add_argument('-t', dest='tail', help='cut down tail data')
 args = psr.parse_args()
-
+tail = int(args.tail)
 xlsx = pd.read_excel(args.input, sheet_name='shiftLog', index_col=None, na_values=['NA'])
+xlsxLength = xlsx.shape[0]
 formerDate = ''
 with open(args.output, 'w') as opt, open(args.goodrun, 'w') as opt2:
     for index, row in xlsx.iterrows():
+        if index>(xlsxLength+tail-1):
+            break
         #print(row)
         if formerDate!=row['Date']:
             opt.write('{}\n'.format(row['Date'].strftime('%Y-%m-%d')))
