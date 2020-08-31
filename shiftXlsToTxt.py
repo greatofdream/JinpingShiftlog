@@ -31,8 +31,8 @@ with open(args.output, 'w') as opt, open(args.goodrun, 'w') as opt2:
         if not (pd.isna(row['EnterTime']) or pd.isna(row['Oxygen'])):
             opt.write('Nitrogen input: {:.2f} Mpa\nNitrogen output: {:.2f} Mpa\nFlux: {:.2f} sccm\nInflation: {}\n'.format(row['N2In'], row['N2Out'], row['flux'], row['inflation']))
             opt.write('Oxygen: {:.1f}%, {:.1f} degree\n\n'.format(row['Oxygen'], row['Temperature']))
-            if not pd.isna(row['Accident']):
-                opt.write('Accident:\n{}\n'.format('\n'.join(str(row['Accident']).split(';'))))
+        if not pd.isna(row['Accident']):
+            opt.write('Accident:\n{}\n'.format('\n'.join(str(row['Accident']).split(';'))))
         opt.write('\n')
         opt2.write('{}\n'.format(row['PhyRun']))
     opt2.write('\n')
