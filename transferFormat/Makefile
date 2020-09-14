@@ -13,6 +13,7 @@ split: $(splitTarget:run2092-2103/Jinping_1ton_Phy_20191230_%.root=%)
 #0000%: run2092-2103/Jinping_1ton_Phy_20??????_0000????*.root
 0000%: 
         mkdir -p run$@
-        for root in $(wildcard run2092-2103/Jinping_1ton_Phy_20??????_0000$**.root);do echo $${root};ln -s $${root} run$@/$$(basename $${root}); done
+        rm run$@/*
+        for root in $(wildcard run2092-2103/Jinping_1ton_Phy_20??????_0000$**.root);do echo $${root};ln -s $$(pwd)/$${root} run$@/$$(basename $${root}); done
 DELETE_ON_ERROR:
 SECONDARY:
