@@ -42,3 +42,10 @@ such as:
 MATCH(lookup_value, lookup_array, [match_type])
 [match](https://support.microsoft.com/zh-cn/office/match-%e5%87%bd%e6%95%b0-e8dffd45-c762-47d6-bf89-533f4a37673a?ui=zh-cn&rs=zh-cn&ad=cn)
 [offset](https://support.microsoft.com/zh-cn/office/offset-%E5%87%BD%E6%95%B0-c8de19ae-dd79-4b9b-a14e-b4d906d11b66)
+
+## upload file
++ DetectorSummary.xlsx
++ shiftlog.txt
++ GoodRunList.txt
+> The DocDB doesn't support Firefox(80.0.1), supports old Edge.
+New Edge and chrome wait to be test
