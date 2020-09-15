@@ -24,7 +24,7 @@ vim config/config.txt
 ./endrun.csh # an file (config/pedestal.txt) will be update
 ls -trl
 root
-[]Pedestal("<runNumber>.root") # this command can be execute in another window
+[]Pedestal("<runNumber>.root") # this command can be execute in another window. Very Very Very important.
 ```
 new run
 ```shell
@@ -34,7 +34,8 @@ vim config/config.txt
 ```
 ## Go Back
 
-## DetectorSummary
+## DetectorSummary.xlsx
+> The xlsx defaults display 200 points(the setting is described behind), which can be modified in the second sheet.
 `名称管理器` set variables
 such as:
 + DarkR=OFFSET(Data!$I$1,MATCH(MAX(Data!$A:$A)+1,Data!$A:$A)-Plot!$A$2,0,Plot!$A$2)
