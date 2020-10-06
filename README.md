@@ -12,3 +12,7 @@ For example(feature):
 + run2092-2103->a series of run00002XXXX
 
 The file are linked use soft link so that origin layout is kept.
+### upload File to Server
+```
+rsync -azvhLP
+```
